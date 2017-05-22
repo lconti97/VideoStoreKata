@@ -8,32 +8,22 @@ namespace VideoStore
 {
     public class Movie
     {
-        public const int CHILDRENS = 2;
-        public const int REGULAR = 0;
-        public const int NEW_RELEASE = 1;
 
-        private String title;
-        private int priceCode;
+        public String Title { get; private set; }
+        public MoviePriceCode PriceCode { get; private set; }
 
-        public Movie(String title, int priceCode)
+        public Movie(String title, MoviePriceCode priceCode)
         {
-            this.title = title;
-            this.priceCode = priceCode;
+            Title = title;
+            PriceCode = priceCode;
         }
 
-        public int getPriceCode()
-        {
-            return priceCode;
-        }
-
-        public void setPriceCode(int code)
-        {
-            priceCode = code;
-        }
-
-        public String getTitle()
-        {
-            return title;
-        }
     }
+    public enum MoviePriceCode
+    {
+        Regular,
+        Childrens,
+        NewRelease
+    }
+
 }
