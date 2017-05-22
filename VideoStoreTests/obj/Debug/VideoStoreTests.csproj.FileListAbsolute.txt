@@ -1,0 +1,14 @@
+D:\dev\VideoStore\VideoStoreTests\obj\Debug\VideoStoreTests.csprojResolveAssemblyReference.cache
+D:\dev\VideoStore\VideoStoreTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+D:\dev\VideoStore\VideoStoreTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+D:\dev\VideoStore\VideoStoreTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+D:\dev\VideoStore\VideoStoreTests\bin\Debug\VideoStoreTests.dll
+D:\dev\VideoStore\VideoStoreTests\bin\Debug\VideoStoreTests.pdb
+D:\dev\VideoStore\VideoStoreTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+D:\dev\VideoStore\VideoStoreTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+D:\dev\VideoStore\VideoStoreTests\bin\Debug\VideoStore.dll
+D:\dev\VideoStore\VideoStoreTests\bin\Debug\VideoStore.pdb
+D:\dev\VideoStore\VideoStoreTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+D:\dev\VideoStore\VideoStoreTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+D:\dev\VideoStore\VideoStoreTests\obj\Debug\VideoStoreTests.dll
+D:\dev\VideoStore\VideoStoreTests\obj\Debug\VideoStoreTests.pdb

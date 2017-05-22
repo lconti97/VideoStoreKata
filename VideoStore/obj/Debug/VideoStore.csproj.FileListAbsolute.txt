@@ -1,0 +1,5 @@
+D:\dev\VideoStore\VideoStore\bin\Debug\VideoStore.dll
+D:\dev\VideoStore\VideoStore\bin\Debug\VideoStore.pdb
+D:\dev\VideoStore\VideoStore\obj\Debug\VideoStore.csprojResolveAssemblyReference.cache
+D:\dev\VideoStore\VideoStore\obj\Debug\VideoStore.dll
+D:\dev\VideoStore\VideoStore\obj\Debug\VideoStore.pdb
