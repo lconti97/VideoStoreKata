@@ -23,26 +23,26 @@ namespace VideoStore
 
         private Double CalculatePrice()
         {
-            double thisAmount = 0;
+            double price = 0;
 
             switch (Movie.PriceCode)
             {
                 case MoviePriceCode.Regular:
-                    thisAmount += 2;
+                    price += 2;
                     if (DaysRented > 2)
-                        thisAmount += (DaysRented - 2) * 1.5;
+                        price += (DaysRented - 2) * 1.5;
                     break;
                 case MoviePriceCode.NewRelease:
-                    thisAmount += DaysRented * 3;
+                    price += DaysRented * 3;
                     break;
                 case MoviePriceCode.Childrens:
-                    thisAmount += 1.5;
+                    price += 1.5;
                     if (DaysRented > 3)
-                        thisAmount += (DaysRented - 3) * 1.5;
+                        price += (DaysRented - 3) * 1.5;
                     break;
             }
 
-            return thisAmount;
+            return price;
         }
 
         private Int32 CalculateFrequentRenterPoints()

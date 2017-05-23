@@ -20,7 +20,7 @@ namespace VideoStoreTests
             Assert.AreEqual("Rental Record for Fred\n" +
                 "\tThe Cell\t9.0\n" +
                 "You owed 9.0\n" +
-                "You earned 2 frequent renter points\n", customer.Statement());
+                "You earned 2 frequent renter points\n", new TextStatement(customer).Print());
         }
 
         [TestMethod]
@@ -32,7 +32,7 @@ namespace VideoStoreTests
                 "\tThe Cell\t9.0\n" +
                 "\tThe Tigger Movie\t9.0\n" +
                 "You owed 18.0\n" +
-                "You earned 4 frequent renter points\n", customer.Statement());
+                "You earned 4 frequent renter points\n", new TextStatement(customer).Print());
         }
 
         [TestMethod]
@@ -42,7 +42,7 @@ namespace VideoStoreTests
             Assert.AreEqual("Rental Record for Fred\n" +
                 "\tThe Tigger Movie\t1.5\n" +
                 "You owed 1.5\n" +
-                "You earned 1 frequent renter points\n", customer.Statement());
+                "You earned 1 frequent renter points\n", new TextStatement(customer).Print());
         }
 
         [TestMethod]
@@ -57,7 +57,7 @@ namespace VideoStoreTests
                 "\t8 1/2\t2.0\n" +
                 "\tPlan 9 from Outer Space\t2.0\n" +
                 "You owed 7.5\n" +
-                "You earned 3 frequent renter points\n", customer.Statement());
+                "You earned 3 frequent renter points\n", new TextStatement(customer).Print());
         }
 
         private Customer customer;

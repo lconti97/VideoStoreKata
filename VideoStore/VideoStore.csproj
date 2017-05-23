@@ -41,8 +41,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Customer.cs" />
+    <Compile Include="HTMLStatement.cs" />
+    <Compile Include="IStatement.cs" />
     <Compile Include="Movie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Statement.cs" />
+    <Compile Include="TextStatement.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Rental.cs" />
