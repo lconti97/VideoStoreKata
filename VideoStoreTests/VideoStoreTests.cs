@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using VideoStore;
+using VideoStore.Factories;
 
 namespace VideoStoreTests
 {
@@ -16,7 +17,7 @@ namespace VideoStoreTests
         [TestMethod]
         public void TestSingleNewReleaseStatement()
         {
-            customer.AddRental(new Rental(new Movie("The Cell", MoviePriceCode.NewRelease), 3));
+            customer.AddRental(RentalFactory.CreateRental(new Movie("The Cell", MoviePriceCode.NewRelease), 3));
             Assert.AreEqual("Rental Record for Fred\n" +
                 "\tThe Cell\t9.0\n" +
                 "You owed 9.0\n" +
@@ -26,8 +27,8 @@ namespace VideoStoreTests
         [TestMethod]
         public void TestDualNewReleaseStatement()
         {
-            customer.AddRental(new Rental(new Movie("The Tigger Movie", MoviePriceCode.NewRelease), 3));
-            customer.AddRental(new Rental(new Movie("The Cell", MoviePriceCode.NewRelease), 3));
+            customer.AddRental(RentalFactory.CreateRental(new Movie("The Tigger Movie", MoviePriceCode.NewRelease), 3));
+            customer.AddRental(RentalFactory.CreateRental(new Movie("The Cell", MoviePriceCode.NewRelease), 3));
             Assert.AreEqual("Rental Record for Fred\n" +
                 "\tThe Cell\t9.0\n" +
                 "\tThe Tigger Movie\t9.0\n" +
@@ -38,7 +39,7 @@ namespace VideoStoreTests
         [TestMethod]
         public void TestSingleChildrensStatement()
         {
-            customer.AddRental(new Rental(new Movie("The Tigger Movie", MoviePriceCode.Childrens), 3));
+            customer.AddRental(RentalFactory.CreateRental(new Movie("The Tigger Movie", MoviePriceCode.Childrens), 3));
             Assert.AreEqual("Rental Record for Fred\n" +
                 "\tThe Tigger Movie\t1.5\n" +
                 "You owed 1.5\n" +
@@ -48,9 +49,9 @@ namespace VideoStoreTests
         [TestMethod]
         public void TestMultipleRegularStatement()
         {
-            customer.AddRental(new Rental(new Movie("Plan 9 from Outer Space", MoviePriceCode.Regular), 1));
-            customer.AddRental(new Rental(new Movie("8 1/2", MoviePriceCode.Regular), 2));
-            customer.AddRental(new Rental(new Movie("Eraserhead", MoviePriceCode.Regular), 3));
+            customer.AddRental(RentalFactory.CreateRental(new Movie("Plan 9 from Outer Space", MoviePriceCode.Regular), 1));
+            customer.AddRental(RentalFactory.CreateRental(new Movie("8 1/2", MoviePriceCode.Regular), 2));
+            customer.AddRental(RentalFactory.CreateRental(new Movie("Eraserhead", MoviePriceCode.Regular), 3));
             
             Assert.AreEqual("Rental Record for Fred\n" +
                 "\tEraserhead\t3.5\n" +

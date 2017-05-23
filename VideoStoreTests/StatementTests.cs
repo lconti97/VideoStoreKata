@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using VideoStore;
+using VideoStore.Factories;
 
 namespace VideoStoreTests
 {
@@ -18,7 +19,7 @@ namespace VideoStoreTests
         [TestMethod]
         public void TestSingleNewReleaseHTMLStatement()
         {
-            customer.AddRental(new Rental(new Movie("The Cell", MoviePriceCode.NewRelease), 3));
+            customer.AddRental(RentalFactory.CreateRental(new Movie("The Cell", MoviePriceCode.NewRelease), 3));
             var expectedStatement = String.Format("Rental Record for Fred{0}{1}The Cell{1}9.0{0}You owed 9.0{0}You earned 2 frequent renter points{0}", "<br />", "&nbsp");
             IStatement actualStatement = new HTMLStatement(customer);
             Assert.AreEqual(expectedStatement, actualStatement.Print());
@@ -27,7 +28,7 @@ namespace VideoStoreTests
         [TestMethod]
         public void TestSingleNewReleaseStatement()
         {
-            customer.AddRental(new Rental(new Movie("The Cell", MoviePriceCode.NewRelease), 3));
+            customer.AddRental(RentalFactory.CreateRental(new Movie("The Cell", MoviePriceCode.NewRelease), 3));
             var expectedStatement = "Rental Record for Fred\n" +
                 "\tThe Cell\t9.0\n" +
                 "You owed 9.0\n" +

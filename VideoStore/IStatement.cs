@@ -1,7 +1,9 @@
-﻿namespace VideoStore
+﻿using System;
+
+namespace VideoStore
 {
     public interface IStatement
     {
-        string Print();
+        String Print();
     }
 }

@@ -12,3 +12,7 @@ D:\dev\VideoStore\VideoStoreTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.
 D:\dev\VideoStore\VideoStoreTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
 D:\dev\VideoStore\VideoStoreTests\obj\Debug\VideoStoreTests.dll
 D:\dev\VideoStore\VideoStoreTests\obj\Debug\VideoStoreTests.pdb
+D:\dev\VideoStore\VideoStoreTests\bin\Debug\Castle.Core.dll
+D:\dev\VideoStore\VideoStoreTests\bin\Debug\Moq.dll
+D:\dev\VideoStore\VideoStoreTests\bin\Debug\Castle.Core.xml
+D:\dev\VideoStore\VideoStoreTests\bin\Debug\Moq.xml
