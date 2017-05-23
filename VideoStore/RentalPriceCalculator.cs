@@ -10,24 +10,31 @@ namespace VideoStore
     {
         public static Double Calculate(MoviePriceCode priceCode, Int32 daysRented)
         {
-            double price = 0;
-
+            Double basePrice = 0;
+            Double additionalChargeRate = 0;
+            Int32 daysForAdditionalCharge = 0;
             switch (priceCode)
             {
                 case MoviePriceCode.Regular:
-                    price += 2;
-                    if (daysRented > 2)
-                        price += (daysRented - 2) * 1.5;
+                    basePrice = 2;
+                    additionalChargeRate = 1.5;
+                    daysForAdditionalCharge = 2;
                     break;
                 case MoviePriceCode.NewRelease:
-                    price += daysRented * 3;
+                    basePrice = 0;
+                    additionalChargeRate = 3;
+                    daysForAdditionalCharge = 0;
                     break;
                 case MoviePriceCode.Childrens:
-                    price += 1.5;
-                    if (daysRented > 3)
-                        price += (daysRented - 3) * 1.5;
+                    basePrice = 1.5;
+                    additionalChargeRate = 1.5;
+                    daysForAdditionalCharge = 3;
                     break;
             }
+
+            double price = basePrice;
+            if (daysRented > daysForAdditionalCharge)
+                price += (daysRented - daysForAdditionalCharge) * additionalChargeRate;
 
             return price;
         }
